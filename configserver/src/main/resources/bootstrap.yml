@@ -2,12 +2,16 @@ spring:
   application:
     name: config-server
   profiles:
-    active: native
+    active: native, git
   cloud:
     config:
       server:
         native:
           search-locations: classpath:/config
+#        git:
+#          uri: https://github.com/ihuaylupo/config.git
+#          search-paths: licensingservice
+#          default-label: master
 
 server:
   port: 8071
